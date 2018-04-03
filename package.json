@@ -1,0 +1,24 @@
+{
+  "name": "imagesearch",
+  "version": "1.0.0",
+  "description": "A backend application which will give data regarding the image that has been searched for",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahanabalram/imagesearch.git"
+  },
+  "author": "Sahana Balram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahanabalram/imagesearch/issues"
+  },
+  "homepage": "https://github.com/sahanabalram/imagesearch#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
