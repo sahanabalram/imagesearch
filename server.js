@@ -23,7 +23,7 @@ app.get("/api/imagesearch/:searchValue*", function (req, res) {
         if (error) {
             res.send("Error saving to database")
         }
-        res.json(data);
+        // res.json(data);
     });
     // return res.json({searchValue, offset});
 });
