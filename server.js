@@ -15,6 +15,14 @@ app.use(bodyParser.json({type: "application/vnd.api+json"}));
 app.use(cors());
 // connect to mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/searches");
+
+// Get All search terms from the database
+app.get("/api/recentsearches",function(req,res){
+    search.find({},function(error,data){
+        res.json(data);
+    });
+});
+// Get call with required and not required params to do a search
 app.get("/api/imagesearch/:searchValue*", function (req, res) {
     let searchValue = req.params.searchValue;
     let offset = req.query.offset;
