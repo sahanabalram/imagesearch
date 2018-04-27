@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const Bing = require("node-bing-api")({apiKey: "03b345b6eac047718232317ede3f7bae"});
+const Bing = require("node-bing-api")({"subscriptionKey": "9ed7af2b1b8944e78ecdb9964b0f2354"});
 // require the schema
 const search = require("./models/search");
 const PORT = process.env.port || 3001;
@@ -31,9 +31,13 @@ app.get("/api/imagesearch/:searchValue*", function (req, res) {
         if (error) {
             res.send("Error saving to database")
         }
-        // res.json(data);
+      Bing.images(searchValue,{
+          top:10
+      },function(error,response,body){
+        res.json(body);
+      });
     });
-    // return res.json({searchValue, offset});
+    
 });
 
 

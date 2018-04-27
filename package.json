@@ -20,7 +20,9 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "hoek": "^5.0.3",
     "mongoose": "^5.0.12",
-    "node-bing-api": "^3.2.2"
+    "node-bing-api": "^3.2.2",
+    "qwant-api": "^0.4.1"
   }
 }
